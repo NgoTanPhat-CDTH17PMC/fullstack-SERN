@@ -3,6 +3,7 @@ import express from "express";
 import bodyParser from "body-parser"; // ho tro lay tham so ma Client truyen len
 import viewEngine from "./config/viewEngine";
 import initWebRoutes from "./route/web";
+import connectDB from "./config/connectDB";
 
 require("dotenv").config(); // giup chung ta chay process.env
 
@@ -13,7 +14,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 viewEngine(app);
-initWebRoutes(app);
+initWebRoutes(app); // khai bao background
+
+connectDB();
 
 let port = process.env.PORT || 6969; // lay PORT trong file .env
 app.listen(port, () => {
