@@ -8,5 +8,7 @@
 👍 Chạy project === câu lệnh này: npm start
 
 -.env: cau hinh cac tham so moi truong
+
 -.babelrc: cau hinh cho trinh compiler
+
 -bodyParser: ho tro lay tham so ma Client truyen len
