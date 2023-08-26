@@ -12,3 +12,5 @@
 -.babelrc: cau hinh cho trinh compiler
 
 -bodyParser: ho tro lay tham so ma Client truyen len
+
+## Mo hinh MVC
