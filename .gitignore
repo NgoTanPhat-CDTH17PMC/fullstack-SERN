@@ -1,0 +1,7 @@
+/Nodejs/node_modules
+/Nodejs/node_modules/*
+/Nodejs//node_modules
+/Nodejs//vendor
+/Nodejs//.idea
+/Nodejs/.iead/
+/Nodejs/.env
