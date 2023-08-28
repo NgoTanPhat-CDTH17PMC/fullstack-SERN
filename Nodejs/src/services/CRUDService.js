@@ -47,6 +47,19 @@ let hashUserPassword = (password) => {
   });
 };
 
+let getAllUser = () => {
+  return new Promise(async (resolve, reject) => {
+    // dung promise de dam bao ham luôn đợi các hàm bên trong chạy xong rồi trả về kết quả, tranh viec bat dong do
+    try {
+      let users = await db.User.findAll({ raw: true });
+      resolve(users);
+    } catch (e) {
+      reject(e);
+    }
+  });
+};
+
 module.exports = {
-  createNewUser,
+  createNewUser: createNewUser,
+  getAllUser: getAllUser,
 };
