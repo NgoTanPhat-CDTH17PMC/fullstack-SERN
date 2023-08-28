@@ -12,6 +12,8 @@ let initWebRoutes = (app) => {
 
   router.post("/post-crud", homeController.postCRUD);
   router.get("/get-crud", homeController.displayGetCRUD);
+  router.get("/edit-crud", homeController.getEditCRUD);
+  router.post("/put-crud", homeController.putCRUD);
   //rest api là dùng theo chuẩn get, post , put, ....
 
   return app.use("/", router); // ap phai bat dau bang dau gach cheo + api
