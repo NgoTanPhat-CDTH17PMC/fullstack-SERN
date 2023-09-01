@@ -2,7 +2,7 @@
 
 import express from "express";
 import homeController from "../controllers/homeController";
-
+import userController from "../controllers/userController";
 let router = express.Router();
 
 let initWebRoutes = (app) => {
@@ -17,6 +17,8 @@ let initWebRoutes = (app) => {
   router.get("/delete-crud", homeController.deleteCRUD);
 
   //rest api là dùng theo chuẩn get, post , put, ....
+
+  router.post("/api/login", userController.handleLogin);
 
   return app.use("/", router); // ap phai bat dau bang dau gach cheo + api
 };
